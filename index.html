@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World - Modern Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .floating-animation {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg">
+    <!-- Navbar -->
+    <div class="navbar bg-base-100/10 backdrop-blur-md border-b border-white/20">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a><i class="fas fa-home mr-2"></i>Home</a></li>
+                    <li><a><i class="fas fa-info-circle mr-2"></i>About</a></li>
+                    <li><a><i class="fas fa-envelope mr-2"></i>Contact</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-xl text-white font-bold">
+                <i class="fas fa-globe mr-2"></i>Hello World
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-white">
+                <li><a class="hover:bg-white/20"><i class="fas fa-home mr-2"></i>Home</a></li>
+                <li><a class="hover:bg-white/20"><i class="fas fa-info-circle mr-2"></i>About</a></li>
+                <li><a class="hover:bg-white/20"><i class="fas fa-envelope mr-2"></i>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle text-white">
+                    <i class="fas fa-palette text-xl"></i>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a onclick="document.documentElement.setAttribute('data-theme', 'light')">
+                        <i class="fas fa-sun mr-2"></i>Light
+                    </a></li>
+                    <li><a onclick="document.documentElement.setAttribute('data-theme', 'dark')">
+                        <i class="fas fa-moon mr-2"></i>Dark
+                    </a></li>
+                    <li><a onclick="document.documentElement.setAttribute('data-theme', 'cupcake')">
+                        <i class="fas fa-cupcake mr-2"></i>Cupcake
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero min-h-screen">
+        <div class="hero-content text-center">
+            <div class="max-w-4xl">
+                <!-- Floating Icon -->
+                <div class="floating-animation mb-8">
+                    <div class="w-32 h-32 mx-auto bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center glow-effect">
+                        <i class="fas fa-rocket text-6xl text-white"></i>
+                    </div>
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="text-6xl md:text-8xl font-bold text-white mb-6 drop-shadow-2xl">
+                    Hello World
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-white/90 mb-8 font-light max-w-2xl mx-auto leading-relaxed">
+                    Bem-vindo ao futuro do desenvolvimento web. Uma experiência moderna, elegante e responsiva.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                    <button class="btn btn-lg bg-white text-purple-600 hover:bg-gray-100 border-none shadow-xl">
+                        <i class="fas fa-play mr-2"></i>
+                        Começar Agora
+                    </button>
+                    <button class="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-purple-600">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Saiba Mais
+                    </button>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                    <div class="card bg-white/10 backdrop-blur-md border border-white/20">
+                        <div class="card-body items-center text-center p-6">
+                            <i class="fas fa-code text-3xl text-white mb-2"></i>
+                            <h3 class="card-title text-white text-lg">Moderno</h3>
+                            <p class="text-white/80 text-sm">Tecnologias de ponta</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-white/10 backdrop-blur-md border border-white/20">
+                        <div class="card-body items-center text-center p-6">
+                            <i class="fas fa-mobile-alt text-3xl text-white mb-2"></i>
+                            <h3 class="card-title text-white text-lg">Responsivo</h3>
+                            <p class="text-white/80 text-sm">Funciona em todos os dispositivos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card bg-white/10 backdrop-blur-md border border-white/20">
+                        <div class="card-body items-center text-center p-6">
+                            <i class="fas fa-bolt text-3xl text-white mb-2"></i>
+                            <h3 class="card-title text-white text-lg">Rápido</h3>
+                            <p class="text-white/80 text-sm">Performance otimizada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-100/10 backdrop-blur-md border-t border-white/20 text-white">
+        <aside>
+            <i class="fas fa-heart text-2xl text-red-400 mb-4"></i>
+            <p class="font-bold text-lg">
+                Hello World Project
+            </p> 
+            <p class="opacity-80">Criado com amor usando Tailwind CSS e DaisyUI</p>
+        </aside>
+        <nav>
+            <div class="grid grid-flow-col gap-4">
+                <a class="btn btn-ghost btn-circle text-white hover:bg-white/20">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a class="btn btn-ghost btn-circle text-white hover:bg-white/20">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <a class="btn btn-ghost btn-circle text-white hover:bg-white/20">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+            </div>
+        </nav>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="btn btn-circle btn-lg bg-white text-purple-600 hover:bg-gray-100 shadow-2xl glow-effect">
+            <i class="fas fa-arrow-up text-xl"></i>
+        </button>
+    </div>
+</body>
+</html>
